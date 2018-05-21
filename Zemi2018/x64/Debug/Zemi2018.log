@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\naoto\documents\大学\基礎ゼミ-中島研-\基礎ゼミ2018用opencvインストーラ\zemi2018\zemi2018\ex03.hpp(159): warning C4244: '=': 'double' から 'uchar' への変換です。データが失われる可能性があります。
+  Zemi2018.vcxproj -> C:\Users\naoto\Documents\大学\基礎ゼミ-中島研-\基礎ゼミ2018用OpenCVインストーラ\Zemi2018\x64\Debug\Zemi2018.exe
