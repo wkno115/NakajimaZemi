@@ -122,7 +122,7 @@ void Lines() {
 		for (int y = 0; y < image[count].rows; y++) {
 			for (int x = 0; x < image[count].cols; x++) {
 				if(x%a[count]==0){
-					image[count].ptr(y, x)[0] = 0;	//両者を割ってからじゃないとオーバーフロー
+					image[count].ptr(y, x)[0] = 0;	
 				}
 				else {
 					image[count].ptr(y, x)[0] = 255;
@@ -167,7 +167,7 @@ void GrayScale() {
 	cv::waitKey();
 }
 
-int main() {
+int main3() {
 	//saveCameraImage();
 	//ClickBlurChange();
 	//xGradation();

@@ -93,9 +93,11 @@
     <ClCompile Include="Sample.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Effects.hpp" />
     <ClInclude Include="ex01.hpp" />
     <ClInclude Include="ex02.hpp" />
     <ClInclude Include="ex03.hpp" />
+    <ClInclude Include="Sample_Eye.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
