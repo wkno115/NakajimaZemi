@@ -41,10 +41,10 @@
     <ClInclude Include="ex03.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Sample_Eye.hpp">
+    <ClInclude Include="Effects.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Effects.hpp">
+    <ClInclude Include="Persona4_play.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

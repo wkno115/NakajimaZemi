@@ -97,7 +97,7 @@
     <ClInclude Include="ex01.hpp" />
     <ClInclude Include="ex02.hpp" />
     <ClInclude Include="ex03.hpp" />
-    <ClInclude Include="Sample_Eye.hpp" />
+    <ClInclude Include="Persona4_play.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
