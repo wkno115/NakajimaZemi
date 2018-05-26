@@ -24,12 +24,12 @@ void SampleEye() {
 		// カメラから取得した画像をフレームに落とし込む
 		cap >> frame;
 		// 目を検出するための下準備 → やらなくても検出はできる
-		cv::Mat gray, smallimg;
-		cv::cvtColor(frame, gray, CV_BGR2GRAY);	// equalizeHist()のために、グレースケール画像へ変換
-		cv::equalizeHist(gray, gray); 			// ヒストグラム均一化
+		cv::Mat grayimg, smallimg;
+		cv::cvtColor(frame, grayimg, CV_BGR2GRAY);	// equalizeHist()のために、グレースケール画像へ変換
+		cv::equalizeHist(grayimg, grayimg); 			// ヒストグラム均一化
 
 		double scale = 3.0;						// 処理時間短縮のために画像を縮小
-		cv::resize(gray, smallimg, cv::Size(frame.cols / scale, frame.rows / scale));
+		cv::resize(grayimg, smallimg, cv::Size(frame.cols / scale, frame.rows / scale));
 		// 下準備終わり
 
 		// 指定した識別器を用いて画像から対象を検出
@@ -49,12 +49,12 @@ void SampleEye() {
 		else if(eyes.size()>=2){
 			count = 0;
 		}
-		int donex = 0;
-		int doney = 0;
-		int doneh = 0;
-		int donew = 0;
-		int x_roi2 = 0;
-		int y_roi2 = 0;
+		int donex = 0;	//オリジナル画像から目の周辺を抜き出す時のx座標
+		int doney = 0;	//オリジナル画像から目の周辺を抜き出す時のy座標
+		int doneh = 0;	//オリジナル画像から目の周辺を抜き出す時のy座標
+		int donew = 0;	//オリジナル画像から目の周辺を抜き出す時の座標
+		int x_roi2 = 0;	//巨大化画像から抜き出す時のx座標
+		int y_roi2 = 0;	//巨大化画像から抜き出す時のy座標
 		for (int i = 0; i < eyes.size(); i++) {
 			// 元の画像サイズに合わせるために、scaleをかける
 			int eyex = eyes[i].x * scale,
@@ -87,7 +87,6 @@ void SampleEye() {
 			if (y_roi2 < 0) {
 				y_roi2 = 0;
 			}
-			//目の囲いの真ん中からそれぞれ「ほにゃ％」
 			cout << "_"<<frame.cols;
 			cv::Mat roi(frame, cv::Rect(0, doney, frame.cols, doneh));	//目元付近の関心領域
 			cv::Mat bigRoi;			//目元アップ画像格納

@@ -137,7 +137,7 @@ void Lines() {
 }
 
 void GrayScale() {
-	int type = 2;	//グラデーションタイプ
+	int type = 1;	//グラデーションタイプ
 	cv::Mat image = cv::imread("sample_gradation.jpg");
 	cv::imshow("Image", image);
 
